@@ -1,11 +1,12 @@
 import CountryCard from "./CountryCard";
-function CountryList({ countries }) {
+function CountryList({ countries = [] }) {
     return (
         <div className="country-list">
             {countries.map((country) => (
-                <CountryCard country={country} key={country.cioc}></CountryCard>
+                <CountryCard key={country.alpha3Code} country={country} />
             ))}
         </div>
     );
 }
+
 export default CountryList;
