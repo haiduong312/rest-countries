@@ -11,7 +11,9 @@ function Home() {
 
     useEffect(() => {
         const filtered = data.filter((country) => {
-            const matchCountries = country.name.includes(searchValue);
+            const matchCountries = country.name
+                .toLowerCase()
+                .includes(searchValue);
             const matchRegion = region ? country.region === region : true;
             return matchCountries && matchRegion;
         });
@@ -20,11 +22,11 @@ function Home() {
     const handleSearchResult = (e) => setSearchValue(e);
     const handelChangeRegion = (e) => setRegion(e);
     return (
-        <div className="">
+        <div className=" flex flex-col min-h-screen dark:bg-[hsl(207,26%,17%)] bg-white">
             <Header />
-            <div className="dark:bg-[hsl(207,26%,17%)] bg-white mt-[70px] min-h-[100vh]">
+            <main className="flex-grow pt-[70px]">
                 <div className="container">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between pt-[40px] pb-[40px]">
                         <Search
                             value={searchValue}
                             onSearch={handleSearchResult}
@@ -38,7 +40,7 @@ function Home() {
                         <CountryList countries={filteredResult} />
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     );
 }

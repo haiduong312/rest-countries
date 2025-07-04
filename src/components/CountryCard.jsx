@@ -11,11 +11,11 @@ function CountryCard({ country }) {
                 alt=""
                 className="w-full h-[170px] object-cover"
             />
-            <div className="p-8">
-                <h3>{country.name}</h3>
-                <p>Population: {country.population}</p>
-                <p>Region: {country.region}</p>
-                <p>Capital: {country.capital}</p>
+            <div className="pt-8 pr-8 pl-8 pb-12">
+                <h3 className="font-bold pb-4 text-3xl">{country.name}</h3>
+                <p className="text-[15px]">Population: {country.population}</p>
+                <p className="text-[15px]">Region: {country.region}</p>
+                <p className="text-[15px]">Capital: {country.capital}</p>
             </div>
         </Link>
     );
