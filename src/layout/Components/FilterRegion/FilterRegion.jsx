@@ -7,7 +7,7 @@ function FilterRegion({ value, onChangeRegion }) {
             <select
                 value={value}
                 onChange={handleChangeRegion}
-                className="bg-[hsl(209,23%,22%)] h-[50px] text-[hsl(0,100%,100%)] p-5 outline-none rounded-md"
+                className="dark:bg-[hsl(209,23%,22%)] bg-white h-[50px] dark:text-[hsl(0,100%,100%)] shadow text-black p-5 outline-none rounded-md"
             >
                 <option value="">Filter By Region</option>
                 <option value="Africa">Africa</option>

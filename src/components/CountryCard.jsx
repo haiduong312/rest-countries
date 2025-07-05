@@ -4,7 +4,7 @@ function CountryCard({ country }) {
     return (
         <Link
             to={`/countrydetails/${country.alpha3Code}`}
-            className="bg-[hsl(209,23%,22%)] rounded-md overflow-hidden shadow-md text-white"
+            className="dark:bg-[hsl(209,23%,22%)] bg-white rounded-md overflow-hidden shadow-md dark:text-white text-black "
         >
             <img
                 src={country.flags.svg}
